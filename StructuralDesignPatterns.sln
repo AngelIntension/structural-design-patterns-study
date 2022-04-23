@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{504E80A1-DEA5-4E54-83BB-4413A7EF75DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPlain", "src\DecoratorPlain\DecoratorPlain.csproj", "{16CD4C89-3ABB-4880-9F7D-B0E06F0ECAD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{03C6B58D-B909-4FB9-8E68-34C27192289D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPlainTest", "test\DecoratorPlainTest\DecoratorPlainTest.csproj", "{0D44B127-BB80-43A1-9BD2-EFB39ADFF055}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16CD4C89-3ABB-4880-9F7D-B0E06F0ECAD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16CD4C89-3ABB-4880-9F7D-B0E06F0ECAD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16CD4C89-3ABB-4880-9F7D-B0E06F0ECAD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16CD4C89-3ABB-4880-9F7D-B0E06F0ECAD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D44B127-BB80-43A1-9BD2-EFB39ADFF055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D44B127-BB80-43A1-9BD2-EFB39ADFF055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D44B127-BB80-43A1-9BD2-EFB39ADFF055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D44B127-BB80-43A1-9BD2-EFB39ADFF055}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16CD4C89-3ABB-4880-9F7D-B0E06F0ECAD0} = {504E80A1-DEA5-4E54-83BB-4413A7EF75DA}
+		{0D44B127-BB80-43A1-9BD2-EFB39ADFF055} = {03C6B58D-B909-4FB9-8E68-34C27192289D}
+	EndGlobalSection
+EndGlobal
