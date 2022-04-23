@@ -10,7 +10,7 @@ namespace DecoratorPlain
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<Client>();
-            services.AddSingleton<IComponent, ComponentA>();
+            services.AddSingleton<IComponent>(serviceProvider => new DecoratorA(new ComponentA()));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Client client)
