@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace FacadeTest
+namespace OpaqueFacadeSubSystemTest
 {
     public class UnitTest1
     {
