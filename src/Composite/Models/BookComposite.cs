@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Composite.Models
 {
-    public abstract class BookComposite
+    public abstract class BookComposite : IComponent
     {
-        private readonly List<Corporation> children;
+        private readonly List<IComponent> children;
 
         public string Name { get; }
         public virtual string Type => GetType().Name;
@@ -16,10 +16,10 @@ namespace Composite.Models
         public BookComposite(string name)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
-            children = new List<Corporation>();
+            children = new List<IComponent>();
         }
 
-        public void Add(Corporation component)
+        public void Add(IComponent component)
         {
             children.Add(component);
         }
@@ -67,7 +67,7 @@ namespace Composite.Models
             sb.Append($"</{HeadingTagName}>");
         }
 
-        public void Remove(Corporation component)
+        public void Remove(IComponent component)
         {
             children.Remove(component);
         }
