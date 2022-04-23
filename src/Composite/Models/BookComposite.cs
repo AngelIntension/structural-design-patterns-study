@@ -63,7 +63,7 @@ namespace Composite.Models
         {
             sb.Append($"<{HeadingTagName} class=\"card-header\">");
             sb.Append(Name);
-            sb.Append($"<span class=\"badge badge-secondary float-right\">{Count()} books</span>");
+            sb.Append($" - <span class=\"badge badge-secondary float-right\">{Count()} books</span>");
             sb.Append($"</{HeadingTagName}>");
         }
 

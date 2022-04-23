@@ -122,7 +122,7 @@ namespace CompositeTest
 
                 sb.Append($"<h1 class=\"card-header\">");
                 sb.Append(corporationName);
-                sb.Append($"<span class=\"badge badge-secondary float-right\">{corporationMock.Object.Count()} books</span>");
+                sb.Append($" - <span class=\"badge badge-secondary float-right\">{corporationMock.Object.Count()} books</span>");
                 sb.Append($"</h1>");
 
                 sb.Append($"<ul class=\"list-group list-group-flush\">");
