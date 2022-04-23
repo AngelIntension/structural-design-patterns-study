@@ -4,22 +4,22 @@ using Xunit;
 
 namespace DecoratorPlainTest
 {
-    public class DecoratorATest
+    public class DecoratorBTest
     {
         [Fact]
-        public void ShouldWrapTheDecoratedResultInADecoratorATag()
+        public void ShouldWrapTheDecoratedResultInADecoratorBTag()
         {
             // arrange
             const string testValue = "Test Value";
             Mock<IComponent> componentMock = new Mock<IComponent>();
             componentMock.Setup(x => x.Operation()).Returns(testValue);
-            DecoratorA sut = new DecoratorA(componentMock.Object);
+            DecoratorB sut = new DecoratorB(componentMock.Object);
 
             // act
             string result = sut.Operation();
 
             // assert
-            Assert.Equal($"<DecoratorA>{testValue}</DecoratorA>", result);
+            Assert.Equal($"<DecoratorB>{testValue}</DecoratorB>", result);
         }
     }
 }
