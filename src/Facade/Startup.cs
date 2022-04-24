@@ -16,6 +16,7 @@ namespace Facade
             services.AddRouting();
             services.AddOpaqueFacadeSubSystem();
             services.AddTransparentFacadeSubSystem();
+            services.AddSingleton<IComponentB, UpdatedComponentB>();
         }
         
         public void Configure(IApplicationBuilder app, IOpaqueFacade opaqueFacade, ITransparentFacade transparentFacade)
