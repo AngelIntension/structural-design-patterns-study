@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OpaqueFacadeSubSystem\OpaqueFacadeSubSystem.csproj" />
+    <ProjectReference Include="..\TransparentFacadeSubSystem\TransparentFacadeSubSystem.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
