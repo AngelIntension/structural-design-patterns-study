@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using OpaqueFacadeSubSystem;
 using OpaqueFacadeSubSystem.Abstractions;
+using TransparentFacadeSubSystem;
+using TransparentFacadeSubSystem.Abstractions;
 
 namespace Facade
 {
@@ -13,9 +15,10 @@ namespace Facade
         {
             services.AddRouting();
             services.AddOpaqueFacadeSubSystem();
+            services.AddTransparentFacadeSubSystem();
         }
         
-        public void Configure(IApplicationBuilder app, IOpaqueFacade opaqueFacade)
+        public void Configure(IApplicationBuilder app, IOpaqueFacade opaqueFacade, ITransparentFacade transparentFacade)
         {
             app.UseRouter(router =>
             {
@@ -27,6 +30,16 @@ namespace Facade
                 router.MapGet("/opaque/b", async context =>
                 {
                     var result = opaqueFacade.ExecuteOperationB();
+                    await context.Response.WriteAsync(result);
+                });
+                router.MapGet("/transparent/a", async context =>
+                {
+                    var result = transparentFacade.ExecuteOperationA();
+                    await context.Response.WriteAsync(result);
+                });
+                router.MapGet("/transparent/b", async context =>
+                {
+                    var result = transparentFacade.ExecuteOperationB();
                     await context.Response.WriteAsync(result);
                 });
             });
